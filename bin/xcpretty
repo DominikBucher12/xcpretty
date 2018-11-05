@@ -21,13 +21,16 @@ report_formats = {
 printer_opts = {
   unicode: XCPretty::Term.unicode?,
   colorize: XCPretty::Term.color?,
-  formatter: XCPretty::Simple
+  formatter: XCPretty::Butcher
 }
 
 OptionParser.new do |opts|
   opts.banner = "Usage: xcodebuild [options] | xcpretty"
   opts.on('-t', '--test', 'Use RSpec style output') do
     printer_opts[:formatter] = XCPretty::RSpec
+  end
+  opts.on('-b', '--butcher', 'Use the only right output') do
+    printer_opts[:formatter] = XCPretty::Butcher
   end
   opts.on('-s', '--simple', 'Use simple output (default)') do
     printer_opts[:formatter] = XCPretty::Simple
