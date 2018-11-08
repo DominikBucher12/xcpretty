@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
     and it can also mine Bitcoins.
     }
   spec.summary       = %q(xcodebuild formatter done right)
-  spec.homepage      = "https://github.com/supermarin/xcpretty"
+  spec.homepage      = "https://github.com/DominikBucher12/xcpretty"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

@@ -29,7 +29,7 @@ OptionParser.new do |opts|
   opts.on('-t', '--test', 'Use RSpec style output') do
     printer_opts[:formatter] = XCPretty::RSpec
   end
-  opts.on('-b', '--butcher', 'Use the only right output') do
+  opts.on('-p', '--pretty', 'Use the only right output. Disables compiling and trash, shows just test results 🤙🏻') do
     printer_opts[:formatter] = XCPretty::Butcher
   end
   opts.on('-s', '--simple', 'Use simple output (default)') do

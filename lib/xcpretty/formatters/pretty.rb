@@ -4,7 +4,7 @@ require 'xcpretty/formatters/formatter'
 
 module XCPretty
 
-  class Butcher < Formatter
+  class Pretty < Formatter
 
     PASS = "✅"
     FAIL = "❌"
