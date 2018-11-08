@@ -21,7 +21,7 @@ report_formats = {
 printer_opts = {
   unicode: XCPretty::Term.unicode?,
   colorize: XCPretty::Term.color?,
-  formatter: XCPretty::Butcher
+  formatter: XCPretty::Pretty
 }
 
 OptionParser.new do |opts|
@@ -30,7 +30,7 @@ OptionParser.new do |opts|
     printer_opts[:formatter] = XCPretty::RSpec
   end
   opts.on('-p', '--pretty', 'Use the only right output. Disables compiling and trash, shows just test results 🤙🏻') do
-    printer_opts[:formatter] = XCPretty::Butcher
+    printer_opts[:formatter] = XCPretty::Pretty
   end
   opts.on('-s', '--simple', 'Use simple output (default)') do
     printer_opts[:formatter] = XCPretty::Simple
