@@ -1,6 +1,5 @@
 # encoding: utf-8
 require 'shellwords'
-require 'xcpretty/formatters/formatter'
 
 module XCPretty
 
